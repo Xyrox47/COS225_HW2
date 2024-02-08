@@ -1,10 +1,9 @@
 public class Grove {
-    public Tree[] Trees;
+    public Tree[] Trees = new Tree[12];
     public String groveName;
 
     public Grove(String groveName){
         this.groveName = groveName;
-        this.Trees = new Tree[12];
  
     }
 
@@ -20,8 +19,10 @@ public class Grove {
         }
         return -1;
     }
-    public void removeTree(int index){
+    public Tree removeTree(int index){
+        Tree a = Trees[index];
         Trees[index] = null;
+        return a;
     }
 
     public String toString(){
